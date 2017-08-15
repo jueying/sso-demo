@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>cn.huahongbin</groupId>
+    <artifactId>sso-demo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>sso-client2</artifactId>
+  <packaging>war</packaging>
+  <name>sso-client2 Maven Webapp</name>
+  
+  <build>
+    <finalName>sso-client2</finalName>
+    
+    <plugins>
+        <plugin>
+            <groupId>org.apache.tomcat.maven</groupId>
+            <artifactId>tomcat7-maven-plugin</artifactId>
+            <version>2.1</version>
+            <configuration>
+                <charset>${project.build.sourceEncoding}</charset>
+                <port>8082</port>
+                <path>/client2</path>
+                <uriEncoding>${project.build.sourceEncoding}</uriEncoding>
+            </configuration>
+        </plugin>
+    </plugins>
+  </build>
+</project>
